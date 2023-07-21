@@ -1,0 +1,15 @@
+.btn{
+    margin-top: 31px;
+}
+.error-message{
+    margin-top: 31px;
+}
+.piechart{
+    display: block;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 20%;
+}
+.container{
+    margin:30px auto;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+   <form #pieChartForm="ngForm" (ngSubmit)="createChart()">
+        <div class="row">
+            <div class="col-5">
+                <label for="box1">Box 1</label>
+                <input type="number" class="form-control" id="firstValueEle" placeholder="Enter First Value" [(ngModel)]="firstValue" name="firstValues" required minlength="0" maxlength="100" >
+            </div>
+            <div class="col-5">
+                <label for="box2">Box 2</label>
+                <input type="number" class="form-control" id="secondValueEle" placeholder="Enter second Value" [(ngModel)]="secondValue" name="secondValues" required minlength="0" maxlength="100"
+                >
+                <div *ngIf="totalExceedsLimit()" class="error-message text-danger">
+                    Total cannot exceed 100%
+                  </div>
+            </div>
+           
+            <div class="col-2">
+                <button type="submit" class="btn btn-success">submit</button>
+            </div>
+        </div>
+           
+           
+       
+    </form>
+        <div class="row piechart">
+            <canvas id="myChart"> </canvas>
+        </div>      
+    
+</div>
